@@ -6,6 +6,7 @@ import Footer from '../Footer/Footer';
 import ApplicationPage from '../ApplicationPage/ApplicationPage';
 import AdminLogin from '../AdminLogin/AdminLogin';
 import AdminDashboard from '../AdminDashboard/AdminDashboard';
+import ApplicantList from '../ApplicantList/ApplicantList'
 
 
 
@@ -23,6 +24,7 @@ renderMainRoutes(){
     <Route exact path="/application-page" component={ApplicationPage}/>
     <Route exact path="/admin-login" component={AdminLogin}/>
     <Route exact path="/admin-dashboard" component={AdminDashboard}/>
+    <Route exact path="/applicant-list" component={ApplicantList}/>
 
   </>
   )

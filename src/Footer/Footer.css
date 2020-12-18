@@ -1,9 +1,12 @@
 .Footer{
+    clear: both;
     bottom: 0;
     background-color: black;
-    position:absolute;
+    position: relative;
     width:100%;
     color:white;
+    
+    
 }
 .portfolio-link{
     color:white;

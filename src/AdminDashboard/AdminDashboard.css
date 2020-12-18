@@ -1,0 +1,26 @@
+
+li{
+    list-style-type: none;
+    padding: 0;
+    font-size: 33px;
+    height: 95px;
+    border: 1px solid black;
+    margin: 3%;
+    border-radius: 3px;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+a{
+    color:black;
+    text-decoration: none;
+}
+.AdminDashboard{
+    height:100%;
+}
+.job-tile:hover{
+background-color: rgb(224, 224, 224);
+}
+
