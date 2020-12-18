@@ -1,7 +1,46 @@
 form{
     display: flex;
     flex-direction: column;
+    align-self: center;
+    display: block;
+    align-self: center;
+    padding: 16px 0;
+    margin-right:0;
+    text-align:0; 
+    background-color: rgba(0, 0, 0, 0.7) ;
+    margin:0;
+    width:100%
 }
 input{
     align-self: center;
+    width: 70%;
+    margin:0;
+}
+label{
+    display: block;
+    justify-content: left;
+    text-align: left;
+    width:70%;
+    margin:0;
+    margin-left:15%;
+    border-radius: 7px;
+    height:21px;
+    max-width:700px;
+    color:white;
+}
+.required:after {
+    content:" *";
+    color: red;
+  }
+#application-resume{
+    align-self: center;
+    padding-left: 23%;
+}
+#application-submit-btn{
+    width: 80%;
+    margin-top:4%;
+    border-radius:33px;;
+    background-color:rgb(241, 90, 41);
+    color:white;
+    border: 1px solid rgb(41, 41, 41);
 }
