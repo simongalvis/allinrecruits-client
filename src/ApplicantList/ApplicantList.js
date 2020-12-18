@@ -13,6 +13,9 @@ class ApplicantList extends React.Component{
                     <li className="applicant-tile"><b>Bob</b></li>
                     <li className="applicant-tile"><b>Mary</b></li>
                     <li className="applicant-tile"><b>John</b></li>
+                    <li className="applicant-tile"><b>Martha</b></li>
+                    <li className="applicant-tile"><b>Sandra</b></li>
+                    <li className="applicant-tile"><b>Francois</b></li>
 
 
                 </ul>

@@ -20,6 +20,12 @@ class AdminDashboard extends React.Component{
                     <Link to="applicant-list">
                         <li className="job-tile"><b>Technology</b></li>
                     </Link>
+                    <Link to="applicant-list">
+                        <li className="job-tile"><b>P.E.</b></li>
+                    </Link>
+                    <Link to="applicant-list">
+                        <li className="job-tile"><b>Art</b></li>
+                    </Link>
                 </ul>
             </div>
         )
