@@ -17,6 +17,9 @@ class LandingPage extends React.Component{
                     <button>Get a Job</button>
                 </Link>
                 
+                <Link to="/admin-login">
+                    <button>Admin Login</button>
+                </Link>
                 
             </div>
         )

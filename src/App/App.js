@@ -4,6 +4,8 @@ import './App.css';
 import LandingPage from '../LandingPage/LandingPage'
 import Footer from '../Footer/Footer';
 import ApplicationPage from '../ApplicationPage/ApplicationPage';
+import AdminLogin from '../AdminLogin/AdminLogin';
+import AdminDashboard from '../AdminDashboard/AdminDashboard';
 
 
 
@@ -19,6 +21,8 @@ renderMainRoutes(){
   <>
     <Route exact path="/" component={LandingPage} />
     <Route exact path="/application-page" component={ApplicationPage}/>
+    <Route exact path="/admin-login" component={AdminLogin}/>
+    <Route exact path="/admin-dashboard" component={AdminDashboard}/>
 
   </>
   )
