@@ -8,7 +8,7 @@ class NavBar extends React.Component{
 
     render(){
         return(
-            <div class="NavBar">
+            <div className="NavBar">
                 <header>
                     <h1>NavBar</h1>
                 </header>
