@@ -1,3 +1,13 @@
 .LandingPage{
     height:100%;
+
+}
+.typingHero{
+    display: inline;
+   
+   
+}
+p{
+    display: inline;
+    text-align: left;
 }
