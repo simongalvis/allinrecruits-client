@@ -28,14 +28,39 @@ label{
     max-width:700px;
     color:white;
 }
+.checkboxLabel{
+    display: inline;
+    justify-content: right;
+    text-align: center;
+    width:20%;
+    margin:3% 0;
+    margin-left:0;
+    border-radius: auto;
+    height:auto;
+    max-width:auto;
+    color:auto;
+    align-self: center;
+}
+.checkboxInput{
+    margin: 3% 0 0 0;
+    width: 5%;
+    align-self: center;
+}
+.checkboxLabelAndInput{
+    text-align:center;
+}
 .required:after {
     content:" *";
     color: red;
   }
-#application-resume{
+#interestedPositionCheckboxList{
+    display: flex;
+    flex-direction: column;
+}
+/* #application-resume{
     align-self: center;
     padding-left: 23%;
-}
+} */
 #application-submit-btn{
     width: 80%;
     margin-top:4%;
