@@ -5,20 +5,43 @@ import './ApplicationForm.css'
 class ApplicationForm extends React.Component{
 
 
+    handleSubmit = e =>{
+        e.preventDefault();
+        console.log('I am working')
+        const { applicationFullname, applicationPhonenumber, applicationEmail, applicationPosition, applicationResume } = e.target;
+        
+        
+        const submission = {
+            fullname: applicationFullname.value,
+            phonenumber: applicationPhonenumber.value,
+            email: applicationEmail.value,
+            interestedposition: applicationPosition.value,
+            resumelink: applicationResume.value
+        }
+
+        console.log(submission)
+    }
+     openPositions =['French teacher','Spanish teacher', 'Robotics instructor', 'Art instructor']
+     state ={
+         counter: 0
+     }
+
 
     render(){
         return(
             <div className="ApplicationForm">
-                <form>
-                    <label htmlFor="application-fullname"  className="required"><b>Full name:</b></label>
-                    <input type="text" id="application-fullname" name="application-fullname" placeholder="John Smith" autoCorrect="off" autoCapitalize="none" required/>
-                    <label htmlFor="application-phonenumber"><b>Phone number:</b></label>
-                    <input type="tel" id="application-phonenumber" name="application-phonenumber" placeholder="123-456-7890" autoCorrect="off" autoCapitalize="none" />
+                <form onSubmit={this.handleSubmit}>
+                    <label htmlFor="applicationFullname"  className="required"><b>Full name:</b></label>
+                    <input type="text" id="applicationFullname" name="applicationFullname" placeholder="John Smith" autoCorrect="off" autoCapitalize="none" required/>
+                    <label htmlFor="applicationPhonenumber"><b>Phone number:</b></label>
+                    <input type="tel" id="applicationPhonenumber" name="applicationPhonenumber" placeholder="123-456-7890" autoCorrect="off" autoCapitalize="none" />
                     <label htmlFor="application-email"><b>Email:</b></label>
-                    <input type="email" id="application-email" name="application-email" placeholder="johnsmith123@email.com" autoCorrect="off" autoCapitalize="none" />
-                    <label htmlFor="interestedPositionCheckboxList"><b>Interested Position(s):</b></label>
+                    <input type="email" id="applicationEmail" name="applicationEmail" placeholder="johnsmith123@email.com" autoCorrect="off" autoCapitalize="none" />
+                    {/* <label htmlFor="interestedPositionCheckboxList"><b>Interested Position(s):</b></label> */}
                     {/* Interested position checkbox list */}
-                    <div id="interestedPositionCheckboxList">
+                    {/* <div id="interestedPositionCheckboxList">
+                        
+
                         <div className="checkboxLabelAndInput">
                             <input type="checkbox" id="subject1" className="checkboxInput" name="subject1" value="Spanish teacher"/>
                             <label htmlFor="subject1" className="checkboxLabel">Spanish teacher</label>
@@ -37,9 +60,17 @@ class ApplicationForm extends React.Component{
                             <label htmlFor="subject4" className="checkboxLabel">Art instructor</label>
                         </div>
                         
-                    </div>
-                    <label htmlFor="application-resume" className="required"><b>Resume</b>(Link)</label>
-                    <input type="url" id="application-resume" name="application-resume" placeholder="https://drive.google.com/file/d/examplelink3648384748/view" autoCorrect="off" autoCapitalize="none" required/>
+                    </div> */}
+                    <label htmlFor="applicationPosition"><b>Interested Position(s):</b></label>
+
+                    <select name="applicationPosition" id="applicationPosition">
+                        <option value="Spanish teacher">Spanish teacher</option>
+                        <option value="French teacher">French teacher</option>
+                        <option value="Robotics instructor">Robotics instructor</option>
+                        <option value="Art instructor">Art instructor</option>
+                    </select>
+                    <label htmlFor="applicationResume" className="required"><b>Resume</b>(Link)</label>
+                    <input type="url" id="applicationResume" name="applicationResume" placeholder="https://drive.google.com/file/d/examplelink3648384748/view" autoCorrect="off" autoCapitalize="none" required/>
                     {/* <label htmlFor="application-resume" className="required"><b>Resume</b>(pdf)</label>
                     <input type="file" id="application-resume" name="application-resume" autoCorrect="off" autoCapitalize="none" required/> */}
                     <button id="application-submit-btn" type="submit"><b>Apply</b></button>
