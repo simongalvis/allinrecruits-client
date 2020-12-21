@@ -1,9 +1,10 @@
 import React from 'react'
+import ApiContext from '../ApiContext';
 import './ApplicationForm.css'
 
 
 class ApplicationForm extends React.Component{
-
+static contextType = ApiContext;
 
     handleSubmit = e =>{
         e.preventDefault();
@@ -18,6 +19,8 @@ class ApplicationForm extends React.Component{
             interestedposition: applicationPosition.value,
             resumelink: applicationResume.value
         }
+
+        this.context.addSubmission(submission);
 
         console.log(submission)
     }

@@ -6,13 +6,36 @@ import Footer from '../Footer/Footer';
 import ApplicationPage from '../ApplicationPage/ApplicationPage';
 import AdminLogin from '../AdminLogin/AdminLogin';
 import AdminDashboard from '../AdminDashboard/AdminDashboard';
-import ApplicantList from '../ApplicantList/ApplicantList'
+import ApplicantList from '../ApplicantList/ApplicantList';
+import config from '../config';
+import ApiContext from '../ApiContext';
 
 
 
 class App extends React.Component {
 
+state = {
+  submissions: ['wendell'],
+}
 
+
+
+handleAddSubmission = (submission) =>{
+  const requestOptions = {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(submission),
+  };
+
+  fetch(`${config.API_ENDPOINT}/submissions`, requestOptions)
+    .then((res) => res.json())
+    .then((resJson) =>
+      this.setState({
+        submissions: [...this.state.submissions, submission ],
+      })
+    );
+    console.log(this.state.submissions)
+}
 
 
 
@@ -31,13 +54,20 @@ renderMainRoutes(){
   
 }
   render(){
+    const value = {
+      admins: this.state.admins,
+      submissions: this.state.submissions,
+      addSubmission: this.handleAddSubmission
+    }
     return (
-      <div className="App">
-       <main>
-         {this.renderMainRoutes()}
-       </main>
-       <Footer/>
-      </div>
+      <ApiContext.Provider value={value}>
+        <div className="App">
+          <main>
+            {this.renderMainRoutes()}
+          </main>
+        <Footer/>
+        </div>
+      </ApiContext.Provider>
     );
 
   }

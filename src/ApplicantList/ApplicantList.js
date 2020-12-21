@@ -25,6 +25,9 @@ componentDidMount(){
             <div className="ApplicantList">
                 <NavBar/>
                 <h1>ApplicantList</h1>
+                { 
+                this.state.submissions.map
+                }
                 <ul id="applicant-tiles">
                     <li className="applicant-tile"><b>Bob</b></li>
                     <li className="applicant-tile"><b>Mary</b></li>
