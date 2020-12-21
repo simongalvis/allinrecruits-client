@@ -1,8 +1,24 @@
 import React from 'react';
 import './ApplicantList.css'
+import config from '../config';
 import NavBar from '../NavBar/NavBar'
 
 class ApplicantList extends React.Component{
+state ={
+    submissions: []
+}
+
+componentDidMount(){
+
+    fetch(`${config.API_ENDPOINT}/submissions`)
+      .then(res => res.json())
+      .then(resJson => this.setState({
+          submissions: [...this.state.submissions, resJson]
+      }))
+    
+    
+  }
+
 
     render(){
         return(
