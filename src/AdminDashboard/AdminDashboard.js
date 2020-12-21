@@ -5,28 +5,27 @@ import { Link } from 'react-router-dom';
 
 class AdminDashboard extends React.Component{
 
+
+
     render(){
+
+        const subjects = ['Spanish','French','Robotics','Art']
+
+
         return(
             <div className="AdminDashboard">
                 <NavBar/>
                 <h1>AdminDashboard</h1>
-                <ul id="job-position-tiles">
+                {
+                    subjects.map(subject =>(
+                        <ul id="job-position-tiles">
                     <Link to="applicant-list">
-                        <li className="job-tile"><b>French</b></li>
-                    </Link>
-                    <Link to="applicant-list">
-                        <li className="job-tile"><b>Spanish</b></li>
-                    </Link>
-                    <Link to="applicant-list">
-                        <li className="job-tile"><b>Technology</b></li>
-                    </Link>
-                    <Link to="applicant-list">
-                        <li className="job-tile"><b>P.E.</b></li>
-                    </Link>
-                    <Link to="applicant-list">
-                        <li className="job-tile"><b>Art</b></li>
+                        <li className="job-tile"><b>{subject}</b></li>
                     </Link>
                 </ul>
+                    ))
+                }
+                
             </div>
         )
     }
