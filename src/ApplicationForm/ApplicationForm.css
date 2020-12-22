@@ -14,6 +14,7 @@ form{
 input, select{
     align-self: center;
     width: 70%;
+    max-width: 407px ;
     margin:0;
 }
 label{
@@ -22,12 +23,14 @@ label{
     text-align: left;
     width:70%;
     margin:0;
-    margin-left:15%;
+    margin-left:21%;
+    max-width: 407px ;
     border-radius: 7px;
     height:21px;
     max-width:700px;
     color:white;
 }
+
 .checkboxLabel{
     display: inline;
     justify-content: right;
@@ -62,8 +65,10 @@ label{
     padding-left: 23%;
 } */
 #application-submit-btn{
-    width: 80%;
-    margin-top:4%;
+    width: 60%;
+    max-width: 407px ;
+    height: 77%;
+    margin-top:3%;
     border-radius:33px;;
     background-color:rgb(241, 90, 41);
     color:white;

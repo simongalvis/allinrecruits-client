@@ -12,7 +12,7 @@ class ApplicationPage extends React.Component{
                 <NavBar/>
                 <h1>Application Page</h1>
                 
-                <ApplicationForm/>
+                <ApplicationForm history={this.props.history}/>
             </div>
         )
     }

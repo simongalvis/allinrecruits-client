@@ -23,6 +23,10 @@ static contextType = ApiContext;
 
         this.context.addSubmission(submission);
 
+        e.target.reset();
+
+        setTimeout( () => this.props.history.push('/submission-redirect'), 1000)
+
         
         
         
@@ -55,10 +59,10 @@ static contextType = ApiContext;
                         <option value="Art instructor">Art instructor</option>
                     </select>
                     <label htmlFor="applicationResume" className="required"><b>Resume</b>(Link)</label>
-                    <input type="url" id="applicationResume" name="applicationResume" placeholder="https://drive.google.com/file/d/examplelink3648384748/view" autoCorrect="off" autoCapitalize="none" required/>
+                    <input type="url" id="applicationResume" name="applicationResume" placeholder="https://drive.google.com/file/d/examplelink3648384748/view" autoCorrect="off" autoCapitalize="none" required/><br/>
                     {/* <label htmlFor="application-resume" className="required"><b>Resume</b>(pdf)</label>
                     <input type="file" id="application-resume" name="application-resume" autoCorrect="off" autoCapitalize="none" required/> */}
-                    <button id="application-submit-btn" type="submit"><b>Apply</b></button>
+                    {/* <a href="/submission-redirect"> */}<button id="application-submit-btn" type="submit" ><b>Apply</b></button>{/* </a> */}
                 </form>
                 
                 
