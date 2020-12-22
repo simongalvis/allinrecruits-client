@@ -1,7 +1,7 @@
 import React from 'react';
 import './SubmissionRedirect.css'
 import NavBar from '../NavBar/NavBar'
-import ApiContext from '../ApiContext';
+
 
 class SubmissionRedirect extends React.Component{
 
