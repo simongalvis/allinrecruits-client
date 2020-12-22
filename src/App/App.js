@@ -76,14 +76,17 @@ handleLogin = (loginUsername, loginPassword) => {
      const found = this.state.admins[0].find(admin => (admin['username'] === loginUsername) ) 
      
      // console.log(found)
-      this.setState({loggedAdmin: found})
-
-     
+      this.setState({loggedAdmin: found})  
    }
  })
-
-
 };
+handleDeleteSubmission = submissionId =>{
+   this.setState({
+    submissions: this.state.submissions[0].filter(submission => submission.id !== submissionId)
+  }) 
+  console.log('I hear you' + submissionId)
+  
+}
 
 
 renderMainRoutes(){
@@ -109,7 +112,8 @@ renderMainRoutes(){
       selectSubject: this.handleSelectSubject,
       selectedSubject: this.state.selectedSubject,
       loginAdmin: this.handleLogin,
-      loggedAdmin: this.state.loggedAdmin
+      loggedAdmin: this.state.loggedAdmin,
+      deleteSubmission: this.handleDeleteSubmission
     }
     return (
       <ApiContext.Provider value={value}>

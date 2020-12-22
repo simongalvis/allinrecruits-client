@@ -7,5 +7,6 @@ export default React.createContext({
     loggedAdmin: {},
     addSubmission: () => {},
     selectSubject: () => {},
-    loginAdmin: () => {}
+    loginAdmin: () => {},
+    deleteSubmission: () => {},
 })
