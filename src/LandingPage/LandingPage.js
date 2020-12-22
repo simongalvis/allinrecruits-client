@@ -12,26 +12,23 @@ class LandingPage extends React.Component{
         return(
             <div className="LandingPage">
                 <NavBar/>
-                <h1>Landing Page</h1>
+                <h1>Welcome to All-In Recruits!</h1>
+                <p id="hero-text">Find a position as a: {' '}  <br/>
                 <div className="typingHero">
-                <p>Find a position as a: {' '}  <br/>
-                <Typical
-                    steps={[`spanish teacher`, 1000,`french teacher`, 1000, " robotics instructor", 1000, `chess instructor`, 1000,]}
-                    loop={Infinity}
-                    wrapper="b"/>
-                </p>
-                
+                    <Typical
+                        id="type-effect-text"
+                        steps={[`spanish teacher`, 2000,`french teacher`, 2000, " robotics instructor", 2000, `chess instructor`, 2000,]}
+                        loop={Infinity}
+                        wrapper="b"/>
                 </div>
-                <br/>
+                </p><br/>
+                
                 
                 
                 <Link to="/application-page">
-                    <button>Apply Now</button>
+                    <button id="apply-button">Apply Now</button>
                 </Link>
                 
-                <Link to="/admin-login">
-                    <button>Admin Login</button>
-                </Link>
                 
             </div>
         )

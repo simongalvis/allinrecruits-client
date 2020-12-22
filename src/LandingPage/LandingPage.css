@@ -7,7 +7,23 @@
    
    
 }
-p{
+.typingHero{
     display: inline;
     text-align: left;
+    font-size: 33px;
+    color:rgb(0, 0, 0)
+}
+#hero-text{
+    font-size: 33px;
+    color:rgb(53, 53, 53)
+}
+#apply-button{
+    margin: 24px 24px;
+    width: 270px;
+    height:49px;
+    font-size: 17px;
+    border-radius: 33px;
+    background-color: rgb(241, 90, 41);
+    color: white;
+    border: 1px solid white;
 }

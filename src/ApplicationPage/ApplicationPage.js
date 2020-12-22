@@ -11,7 +11,7 @@ class ApplicationPage extends React.Component{
             <div className="ApplicationPage">
                 <NavBar/>
                 <h1>Application Page</h1>
-                <h2>React type effect hero here</h2>
+                
                 <ApplicationForm/>
             </div>
         )
