@@ -15,9 +15,19 @@ import ApiContext from '../ApiContext';
 class App extends React.Component {
 
 state = {
-  submissions: ['wendell'],
+  submissions: '',
+  selectedSubject: ''
 }
 
+componentDidMount(){
+
+  fetch(`${config.API_ENDPOINT}/submissions`)
+    .then(res => res.json())
+    .then(resJson => this.setState({
+        submissions: [resJson]
+    }))
+  
+}
 
 
 handleAddSubmission = (submission) =>{
@@ -26,6 +36,7 @@ handleAddSubmission = (submission) =>{
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(submission),
   };
+  
 
   fetch(`${config.API_ENDPOINT}/submissions`, requestOptions)
     .then((res) => res.json())
@@ -36,7 +47,9 @@ handleAddSubmission = (submission) =>{
     );
     console.log(this.state.submissions)
 }
-
+handleSelectSubject = (subject) =>{
+  this.setState({selectedSubject: subject})
+}
 
 
 
@@ -57,7 +70,9 @@ renderMainRoutes(){
     const value = {
       admins: this.state.admins,
       submissions: this.state.submissions,
-      addSubmission: this.handleAddSubmission
+      addSubmission: this.handleAddSubmission,
+      selectSubject: this.handleSelectSubject,
+      selectedSubject: this.state.selectedSubject
     }
     return (
       <ApiContext.Provider value={value}>

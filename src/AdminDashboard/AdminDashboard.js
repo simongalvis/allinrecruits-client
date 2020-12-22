@@ -2,8 +2,12 @@ import React from 'react';
 import './AdminDashboard.css'
 import NavBar from '../NavBar/NavBar'
 import { Link } from 'react-router-dom';
+import ApiContext from '../ApiContext';
 
 class AdminDashboard extends React.Component{
+static contextType = ApiContext;
+
+
 
 
 
@@ -20,7 +24,7 @@ class AdminDashboard extends React.Component{
                     subjects.map(subject =>(
                         <ul id="job-position-tiles">
                     <Link to="applicant-list">
-                        <li className="job-tile"><b>{subject}</b></li>
+                        <li className="job-tile" onClick={ e => this.context.selectSubject(subject)}><b>{subject}</b></li>
                     </Link>
                 </ul>
                     ))

@@ -1,42 +1,35 @@
 import React from 'react';
 import './ApplicantList.css'
-import config from '../config';
 import NavBar from '../NavBar/NavBar'
+import ApiContext from '../ApiContext';
 
 class ApplicantList extends React.Component{
-state ={
-    submissions: []
-}
-
-componentDidMount(){
-
-    fetch(`${config.API_ENDPOINT}/submissions`)
-      .then(res => res.json())
-      .then(resJson => this.setState({
-          submissions: [...this.state.submissions, resJson]
-      }))
-    
-    
-  }
 
 
+static contextType = ApiContext;
+
+filteredSubmissions = this.context.submissions[0].filter(submission => submission.interestedposition.includes(this.context.selectedSubject))
+
+
+  
+
+                                                                            
     render(){
+
         return(
             <div className="ApplicantList">
                 <NavBar/>
                 <h1>ApplicantList</h1>
-                { 
-                this.state.submissions.map
-                }
                 <ul id="applicant-tiles">
-                    <li className="applicant-tile"><b>Bob</b></li>
-                    <li className="applicant-tile"><b>Mary</b></li>
-                    <li className="applicant-tile"><b>John</b></li>
-                    <li className="applicant-tile"><b>Martha</b></li>
-                    <li className="applicant-tile"><b>Sandra</b></li>
-                    <li className="applicant-tile"><b>Francois</b></li>
+           {this.filteredSubmissions.map(submission =>(
+                    <li className="applicantTile">
+                        <b>{submission.fullname}</b>
+                        Number: {submission.phonenumber}<br/>
+                        Email: {submission.email}<br/>
+                        Resume: <p><a href={submission.resumelink}>{submission.resumelink}</a></p>
 
-
+                    </li>  
+           ))}
                 </ul>
             </div>
         )

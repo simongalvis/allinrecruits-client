@@ -1,0 +1,9 @@
+.applicantTile{
+    display: flex;
+    flex-direction: column;
+    font-size: 17px;
+    height:auto
+}
+p{
+    display: inline;
+}
