@@ -26,7 +26,7 @@ filteredSubmissions = this.context.submissions[0].filter(submission => submissio
                         <b>{submission.fullname}</b>
                         Number: {submission.phonenumber}<br/>
                         Email: {submission.email}<br/>
-                        Resume: <p><a href={submission.resumelink}>{submission.resumelink}</a></p>
+                         <a href={submission.resumelink}>Resume: {submission.resumelink}</a>
 
                     </li>  
            ))}

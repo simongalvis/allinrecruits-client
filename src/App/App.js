@@ -16,7 +16,9 @@ class App extends React.Component {
 
 state = {
   submissions: '',
-  selectedSubject: ''
+  selectedSubject: '',
+  admins: '',
+  loggedAdmin: {}
 }
 
 componentDidMount(){
@@ -25,6 +27,12 @@ componentDidMount(){
     .then(res => res.json())
     .then(resJson => this.setState({
         submissions: [resJson]
+    }))
+
+    fetch(`${config.API_ENDPOINT}/admins`)
+    .then(res => res.json())
+    .then(resJson => this.setState({
+        admins: [resJson]
     }))
   
 }
@@ -51,6 +59,30 @@ handleSelectSubject = (subject) =>{
   this.setState({selectedSubject: subject})
 }
 
+handleLogin = (loginUsername, loginPassword) => {
+  const requestOptions = {
+   method: "POST",
+   headers: { "Content-Type": "application/json" },
+   body: JSON.stringify({username: loginUsername, password:loginPassword })
+ };
+
+  fetch(`${config.API_ENDPOINT}/admins/login`, requestOptions)
+   .then((res) => { if (res.statusText != 'OK') {
+     
+      alert('Username or password are incorrect. Please try again!')
+   }
+   else if (res.statusText == 'OK') {
+     const found = this.state.admins[0].find(admin => (admin['username'] == loginUsername) ) 
+     
+      console.log(found)
+      this.setState({loggedAdmin: found})
+
+     
+   }
+ })
+
+
+};
 
 
 renderMainRoutes(){
@@ -72,7 +104,9 @@ renderMainRoutes(){
       submissions: this.state.submissions,
       addSubmission: this.handleAddSubmission,
       selectSubject: this.handleSelectSubject,
-      selectedSubject: this.state.selectedSubject
+      selectedSubject: this.state.selectedSubject,
+      loginAdmin: this.handleLogin,
+      loggedAdmin: this.state.loggedAdmin
     }
     return (
       <ApiContext.Provider value={value}>

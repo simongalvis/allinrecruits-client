@@ -4,6 +4,8 @@ export default React.createContext({
     admins:[],
     submissions:[],
     selectedSubject:'',
+    loggedAdmin: {},
     addSubmission: () => {},
-    selectSubject: () => {}
+    selectSubject: () => {},
+    loginAdmin: () => {}
 })
