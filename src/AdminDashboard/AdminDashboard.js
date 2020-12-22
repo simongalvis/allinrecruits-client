@@ -19,7 +19,7 @@ static contextType = ApiContext;
         return(
             <div className="AdminDashboard">
                 <NavBar/>
-                <h1>AdminDashboard</h1>
+                <h1>Subjects:</h1>
                 <ul id="job-position-tiles">
                 {
                     subjects.map(subject =>(
