@@ -7,6 +7,7 @@ import ApplicationPage from '../ApplicationPage/ApplicationPage';
 import AdminLogin from '../AdminLogin/AdminLogin';
 import AdminDashboard from '../AdminDashboard/AdminDashboard';
 import ApplicantList from '../ApplicantList/ApplicantList';
+import SubmissionRedirect from '../SubmissionRedirect/SubmissionRedirect';
 import config from '../config';
 import ApiContext from '../ApiContext';
 
@@ -52,7 +53,7 @@ handleAddSubmission = (submission) =>{
       this.setState({
         submissions: [...this.state.submissions, submission ],
       })
-    );
+    )
     console.log(this.state.submissions)
 }
 handleSelectSubject = (subject) =>{
@@ -93,6 +94,8 @@ renderMainRoutes(){
     <Route exact path="/admin-login" component={AdminLogin}/>
     <Route exact path="/admin-dashboard" component={AdminDashboard}/>
     <Route exact path="/applicant-list" component={ApplicantList}/>
+    <Route exact path="/submission-redirect" component={SubmissionRedirect}/>
+
 
   </>
   )

@@ -35,7 +35,7 @@ class AdminLogin extends React.Component{
                     <label htmlFor="loginUsername"><b>Username:</b> </label>
                     <input type="text" id="loginUsername" name="loginUsername" autoCorrect="off" autoCapitalize="none" required/>
                     <label htmlFor="loginPassword"><b>Password:</b> </label>
-                    <input type="password" id="loginPassword" name="loginPassword" autoCorrect="off" autoCapitalize="none" required/>
+                    <input type="password" id="loginPassword" name="loginPassword" autoCorrect="off" autoCapitalize="none" required/><br/>
                     
                     <button type="submit">Log In</button>
                     
