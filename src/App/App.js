@@ -54,7 +54,7 @@ handleAddSubmission = (submission) =>{
         submissions: [...this.state.submissions, submission ],
       })
     )
-    console.log(this.state.submissions)
+    //console.log(this.state.submissions)
 }
 handleSelectSubject = (subject) =>{
   this.setState({selectedSubject: subject})

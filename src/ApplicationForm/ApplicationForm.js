@@ -9,7 +9,7 @@ static contextType = ApiContext;
 
     handleSubmit = e =>{
         e.preventDefault();
-        console.log('I am working')
+        //console.log('I am working')
         const { applicationFullname, applicationPhonenumber, applicationEmail, applicationPosition, applicationResume } = e.target;
         
         
@@ -27,7 +27,7 @@ static contextType = ApiContext;
         
         
     
-        console.log(submission)
+        //console.log(submission)
     }
      openPositions =['French teacher','Spanish teacher', 'Robotics instructor', 'Art instructor']
      state ={
