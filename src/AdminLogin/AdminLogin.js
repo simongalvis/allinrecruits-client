@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
 import './AdminLogin.css'
 import NavBar from '../NavBar/NavBar'
 import ApiContext from '../ApiContext';

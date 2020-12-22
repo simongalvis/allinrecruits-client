@@ -19,10 +19,10 @@ filteredSubmissions = this.context.submissions[0].filter(submission => submissio
         return(
             <div className="ApplicantList">
                 <NavBar/>
-                <h1>ApplicantList</h1>
+                <h1>Submissions: {this.context.selectedSubject}</h1>
                 <ul id="applicant-tiles">
            {this.filteredSubmissions.map(submission =>(
-                    <li className="applicantTile">
+                    <li className="applicantTile" key={submission.id}>
                         <b>{submission.fullname}</b>
                         Number: {submission.phonenumber}<br/>
                         Email: {submission.email}<br/>

@@ -20,16 +20,17 @@ static contextType = ApiContext;
             <div className="AdminDashboard">
                 <NavBar/>
                 <h1>AdminDashboard</h1>
+                <ul id="job-position-tiles">
                 {
                     subjects.map(subject =>(
-                        <ul id="job-position-tiles">
-                    <Link to="applicant-list">
-                        <li className="job-tile" onClick={ e => this.context.selectSubject(subject)}><b>{subject}</b></li>
-                    </Link>
-                </ul>
-                    ))
-                }
                 
+                    <Link to="applicant-list" key={subject}>
+                        <li className="job-tile"   onClick={ e => this.context.selectSubject(subject)}><b>{subject}</b></li>
+                    </Link>
+                
+                    ))     
+                }
+                </ul>
             </div>
         )
     }

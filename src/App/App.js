@@ -67,14 +67,14 @@ handleLogin = (loginUsername, loginPassword) => {
  };
 
   fetch(`${config.API_ENDPOINT}/admins/login`, requestOptions)
-   .then((res) => { if (res.statusText != 'OK') {
+   .then((res) => { if (res.statusText !== 'OK') {
      
       alert('Username or password are incorrect. Please try again!')
    }
-   else if (res.statusText == 'OK') {
-     const found = this.state.admins[0].find(admin => (admin['username'] == loginUsername) ) 
+   else if (res.statusText === 'OK') {
+     const found = this.state.admins[0].find(admin => (admin['username'] === loginUsername) ) 
      
-      console.log(found)
+     // console.log(found)
       this.setState({loggedAdmin: found})
 
      
