@@ -84,7 +84,7 @@ handleDeleteSubmission = submissionId =>{
    this.setState({
     submissions: this.state.submissions[0].filter(submission => submission.id !== submissionId)
   }) 
-  console.log('I hear you' + submissionId)
+  //console.log('Listening' + submissionId)
   
 }
 
