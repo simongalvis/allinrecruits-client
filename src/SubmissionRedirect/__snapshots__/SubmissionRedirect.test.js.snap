@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SubmissionRedirect component Renders UI as expected 1`] = `
+<div
+  className="SubmissionRedirect"
+>
+  <div
+    className="NavBar"
+  >
+    <header>
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <img
+          alt="all-in-education-logo"
+          id="main-logo"
+          src="all-in-logo.png"
+        />
+      </a>
+      <a
+        href="/admin-login"
+      >
+        <button
+          id="admin-login-button"
+        >
+          Admin Login
+        </button>
+      </a>
+    </header>
+  </div>
+  <h2>
+    Thank you for your submission!
+  </h2>
+  <p>
+    We'll process your application and let you know when we have available positions that suit your profile
+  </p>
+  <br />
+</div>
+`;

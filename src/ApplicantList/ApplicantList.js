@@ -16,7 +16,7 @@ handleClickDelete = id =>{
     //id.preventDefault()
     const submissionId = id
 
-    console.log(submissionId)
+    //console.log(submissionId)
 
     fetch(`${config.API_ENDPOINT}/submissions/${submissionId}`, {
       method: 'DELETE',
