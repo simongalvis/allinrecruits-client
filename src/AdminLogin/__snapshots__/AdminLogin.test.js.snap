@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AdminLogin component Renders UI as expected 1`] = `
+<div
+  className="AdminLogin"
+>
+  <div
+    className="NavBar"
+  >
+    <header>
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <img
+          alt="all-in-education-logo"
+          id="main-logo"
+          src="all-in-logo.png"
+        />
+      </a>
+      <a
+        href="/admin-login"
+      >
+        <button
+          id="admin-login-button"
+        >
+          Admin Login
+        </button>
+      </a>
+    </header>
+  </div>
+  <h1>
+    AdminLogin
+  </h1>
+  <form
+    onSubmit={[Function]}
+  >
+    <label
+      htmlFor="loginUsername"
+    >
+      <b>
+        Username:
+      </b>
+       
+    </label>
+    <input
+      autoCapitalize="none"
+      autoCorrect="off"
+      id="loginUsername"
+      name="loginUsername"
+      required={true}
+      type="text"
+    />
+    <label
+      htmlFor="loginPassword"
+    >
+      <b>
+        Password:
+      </b>
+       
+    </label>
+    <input
+      autoCapitalize="none"
+      autoCorrect="off"
+      id="loginPassword"
+      name="loginPassword"
+      required={true}
+      type="password"
+    />
+    <br />
+    <button
+      type="submit"
+    >
+      Log In
+    </button>
+  </form>
+</div>
+`;
