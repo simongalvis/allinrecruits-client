@@ -9,4 +9,5 @@ export default React.createContext({
     selectSubject: () => {},
     loginAdmin: () => {},
     deleteSubmission: () => {},
+    deleteTriggered: () => {}
 })

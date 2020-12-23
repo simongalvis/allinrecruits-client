@@ -81,9 +81,11 @@ handleLogin = (loginUsername, loginPassword) => {
  })
 };
 handleDeleteSubmission = submissionId =>{
-   this.setState({
-    submissions: this.state.submissions[0].filter(submission => submission.id !== submissionId)
-  }) 
+    this.setState({
+    submissions: !this.state.deleteTriggered ? this.state.submissions[0].filter(submission => submission.id !== submissionId) : this.state.submissions.filter(submission => submission.id !== submissionId)
+  })
+  this.setState({ deleteTriggered: true})  
+  //console.log(this.state.submissions[0].filter(submission => submission.id !== submissionId))
   //console.log('Listening' + submissionId)
   
 }
@@ -113,7 +115,8 @@ renderMainRoutes(){
       selectedSubject: this.state.selectedSubject,
       loginAdmin: this.handleLogin,
       loggedAdmin: this.state.loggedAdmin,
-      deleteSubmission: this.handleDeleteSubmission
+      deleteSubmission: this.handleDeleteSubmission,
+      deleteTriggered:this.state.deleteTriggered
     }
     return (
       <ApiContext.Provider value={value}>

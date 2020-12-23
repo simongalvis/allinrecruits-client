@@ -8,9 +8,13 @@ class ApplicantList extends React.Component{
 
 
 static contextType = ApiContext;
+state={
+  filteredSubmissions: !this.context.deleteTriggered ? this.context.submissions[0].filter(submission => submission.interestedposition.includes(this.context.selectedSubject)) : this.context.submissions.filter(submission => submission.interestedposition.includes(this.context.selectedSubject)) 
 
+}
 
-filteredSubmissions = this.context.submissions[0].filter(submission => submission.interestedposition.includes(this.context.selectedSubject))
+//filteredSubmissions = this.context.submissions[0].filter(submission => submission.interestedposition.includes(this.context.selectedSubject))
+
 
 handleClickDelete = id =>{
     //id.preventDefault()
@@ -30,10 +34,18 @@ handleClickDelete = id =>{
         
       })
       .then(() => {
-        this.context.deleteSubmission(submissionId)
+        console.log(this.state.filteredSubmissions)
+        this.setState({
+          filteredSubmissions: this.state.filteredSubmissions.filter(submission => submission.id !== submissionId)
+        }, () => {
+          console.log(this.state.filteredSubmissions)
+          this.context.deleteSubmission(submissionId)
+        })
+        .then(this.setState({ deleteTriggered: true}))
 
        
       })
+      
       
      
       .catch(error => {
@@ -47,13 +59,14 @@ handleClickDelete = id =>{
 
                                                                             
     render(){
+      console.log("Filtered list here: " + this.state.filteredSubmissions)
 
         return(
             <div className="ApplicantList">
                 <NavBar/>
                 <h1>Submissions: {this.context.selectedSubject}</h1>
                 <ul id="applicant-tiles">
-           {this.filteredSubmissions.map(submission =>(
+           {this.state.filteredSubmissions.map(submission =>(
                     <li className="applicantTile" key={submission.id}>
                         <b>{submission.fullname}</b>
                         Number: {submission.phonenumber}<br/>

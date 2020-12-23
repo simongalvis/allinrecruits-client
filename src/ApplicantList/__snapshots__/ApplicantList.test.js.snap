@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ApplicantList component Renders UI as expected 1`] = `
+<div
+  className="ApplicantList"
+>
+  <div
+    className="NavBar"
+  >
+    <header>
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <img
+          alt="all-in-education-logo"
+          id="main-logo"
+          src="all-in-logo.png"
+        />
+      </a>
+      <a
+        href="/admin-login"
+      >
+        <button
+          id="admin-login-button"
+        >
+          Admin Login
+        </button>
+      </a>
+    </header>
+  </div>
+  <h1>
+    Submissions: 
+    
+  </h1>
+  <ul
+    id="applicant-tiles"
+  />
+</div>
+`;
