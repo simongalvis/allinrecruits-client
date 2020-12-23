@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component Renders UI as expected 1`] = `
+<div
+  className="Footer"
+>
+  <p
+    className="portfolio-link"
+  >
+    © - 
+    <a
+      className="portfolio-link"
+      href="http://simongalvis.com/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      simongalvis.com
+    </a>
+  </p>
+</div>
+`;
