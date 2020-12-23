@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component Renders UI as expected 1`] = `
+<div
+  className="App"
+>
+  <main>
+    <div
+      className="LandingPage"
+    >
+      <div
+        className="NavBar"
+      >
+        <header>
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            <img
+              alt="all-in-education-logo"
+              id="main-logo"
+              src="all-in-logo.png"
+            />
+          </a>
+          <a
+            href="/admin-login"
+          >
+            <button
+              id="admin-login-button"
+            >
+              Admin Login
+            </button>
+          </a>
+        </header>
+      </div>
+      <h1>
+        Welcome to All-In Recruits!
+      </h1>
+      <p
+        id="hero-text"
+      >
+        Find a position as a: 
+         
+          
+        <br />
+        <div
+          className="typingHero"
+        >
+          <b
+            className="styles_typicalWrapper__1_Uvh"
+          />
+        </div>
+      </p>
+      <br />
+      <a
+        href="/application-page"
+        onClick={[Function]}
+      >
+        <button
+          id="apply-button"
+        >
+          Apply Now
+        </button>
+      </a>
+    </div>
+  </main>
+  <div
+    className="Footer"
+  >
+    <p
+      className="portfolio-link"
+    >
+      © - 
+      <a
+        className="portfolio-link"
+        href="http://simongalvis.com/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        simongalvis.com
+      </a>
+    </p>
+  </div>
+</div>
+`;
