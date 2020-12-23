@@ -11,11 +11,20 @@
     display: inline;
     text-align: left;
     font-size: 33px;
-    color:rgb(0, 0, 0)
+    color:rgb(0, 0, 0);
+    font-weight: 900;
 }
 #hero-text{
     font-size: 33px;
     color:rgb(53, 53, 53)
+}
+#app-description{
+    display: inline;
+    margin: 24px 0px; 
+    padding-left:21px;
+    padding-right:21px;
+    max-width: 700px;
+    font-size: 17px;
 }
 #apply-button{
     margin: 24px 24px;

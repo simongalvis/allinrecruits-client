@@ -20,7 +20,8 @@ class LandingPage extends React.Component{
                         steps={[`spanish teacher`, 2000,`french teacher`, 2000, " robotics instructor", 2000, `chess instructor`, 2000,]}
                         loop={Infinity}
                         wrapper="b"/>
-                </div>
+                </div><br/>
+                <div id="app-description">Apply now to be considered for our upcoming available positions.</div>
                 </p><br/>
                 
                 
