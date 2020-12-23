@@ -7,6 +7,7 @@ li{
     border: 1px solid black;
     margin: 3%;
     border-radius: 3px;
+    max-width: 500px;
 }
 ul{
     display: flex;
@@ -21,6 +22,25 @@ a{
     height:100%;
 }
 .job-tile:hover{
-background-color: rgb(224, 224, 224);
+background-color: rgb(241, 90, 41, .5);
+}
+.job-tile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subject-btn-title{
+    font-size: 27px;
+    
 }
 
+@media only screen and (min-width: 777px) {
+    .job-tile{
+        width:500px;
+    }
+    .tiles-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } 
+  }

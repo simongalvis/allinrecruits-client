@@ -82,7 +82,9 @@ handleLogin = (loginUsername, loginPassword) => {
 };
 handleDeleteSubmission = submissionId =>{
     this.setState({
-    submissions: !this.state.deleteTriggered ? this.state.submissions[0].filter(submission => submission.id !== submissionId) : this.state.submissions.filter(submission => submission.id !== submissionId)
+    submissions: !this.state.deleteTriggered
+                 ? this.state.submissions[0].filter(submission => submission.id !== submissionId) 
+                 : this.state.submissions.filter(submission => submission.id !== submissionId)
   })
   this.setState({ deleteTriggered: true})  
   //console.log(this.state.submissions[0].filter(submission => submission.id !== submissionId))

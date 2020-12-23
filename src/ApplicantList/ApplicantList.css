@@ -28,3 +28,13 @@ p{
     font-weight: bold;
     
 }
+@media only screen and (min-width: 777px) {
+    .applicantTile{
+        width:500px;
+    }
+    .tiles-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } 
+  }

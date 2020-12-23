@@ -15,7 +15,7 @@ class NavBar extends React.Component{
                         <img src={logo} alt="all-in-education-logo" id="main-logo"/>
                     </Link>
                     <a href="/admin-login">
-                        <button  id="admin-login-button">Admin Login</button>
+                        <button  id="admin-login-btn">Admin Login</button>
                     </a>
                 </header>
                 

@@ -1,3 +1,23 @@
 .AdminLogin{
     height:100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(75, 75, 75);
+    
+}
+#admin-login-heading{
+    background-color: white;
+    margin-bottom: 0;
+    padding-bottom: 17px;
+}
+
+#admin-login-button{
+    margin: 24px 24px;
+    width: 177px;
+    height:33px;
+    font-size: 17px;
+    border-radius: 33px;
+    background-color: gray;
+    color: white;
+    border: 1px solid black;
 }

@@ -1,3 +1,10 @@
+.ApplicationForm{
+    background-color: rgba(0, 0, 0, 0.7) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
 form{
     display: flex;
     flex-direction: column;
@@ -7,28 +14,32 @@ form{
     padding: 16px 0;
     margin-right:0;
     text-align:0; 
-    background-color: rgba(0, 0, 0, 0.7) ;
+    
     margin:0;
-    width:100%
+    width:70%
 }
 input, select{
     align-self: center;
     width: 70%;
     max-width: 407px ;
     margin:0;
+    border-radius: 17px;
+    height:21px;
+    border: 1px solid black;
+    background-color: rgb(224, 224, 224);
+}
+input, select{
+    border-radius: 17px;
+    height:21px;
 }
 label{
-    display: block;
-    justify-content: left;
-    text-align: left;
-    width:70%;
-    margin:0;
-    margin-left:21%;
+    display: inline-block;
+    width: 70%;
     max-width: 407px ;
-    border-radius: 7px;
-    height:21px;
-    max-width:700px;
     color:white;
+    margin:0;
+    text-align:left;
+    font-weight: bold;
 }
 
 .checkboxLabel{
@@ -60,14 +71,9 @@ label{
     display: flex;
     flex-direction: column;
 }
-/* #application-resume{
-    align-self: center;
-    padding-left: 23%;
-} */
 #application-submit-btn{
-    width: 60%;
-    max-width: 407px ;
-    height: 77%;
+    width: 177px;
+    height: 33px;
     margin-top:3%;
     border-radius:33px;;
     background-color:rgb(241, 90, 41);
