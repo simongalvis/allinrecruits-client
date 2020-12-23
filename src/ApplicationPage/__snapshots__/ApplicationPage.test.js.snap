@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ApplicationPage component Renders UI as expected 1`] = `
+<div
+  className="ApplicationPage"
+>
+  <div
+    className="NavBar"
+  >
+    <header>
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <img
+          alt="all-in-education-logo"
+          id="main-logo"
+          src="all-in-logo.png"
+        />
+      </a>
+      <a
+        href="/admin-login"
+      >
+        <button
+          id="admin-login-button"
+        >
+          Admin Login
+        </button>
+      </a>
+    </header>
+  </div>
+  <h1>
+    Application Page
+  </h1>
+  <div
+    className="ApplicationForm"
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <label
+        className="required"
+        htmlFor="applicationFullname"
+      >
+        <b>
+          Full name:
+        </b>
+      </label>
+      <input
+        autoCapitalize="none"
+        autoCorrect="off"
+        id="applicationFullname"
+        name="applicationFullname"
+        placeholder="John Smith"
+        required={true}
+        type="text"
+      />
+      <label
+        htmlFor="applicationPhonenumber"
+      >
+        <b>
+          Phone number:
+        </b>
+      </label>
+      <input
+        autoCapitalize="none"
+        autoCorrect="off"
+        id="applicationPhonenumber"
+        name="applicationPhonenumber"
+        placeholder="123-456-7890"
+        type="tel"
+      />
+      <label
+        htmlFor="application-email"
+      >
+        <b>
+          Email:
+        </b>
+      </label>
+      <input
+        autoCapitalize="none"
+        autoCorrect="off"
+        id="applicationEmail"
+        name="applicationEmail"
+        placeholder="johnsmith123@email.com"
+        type="email"
+      />
+      <label
+        htmlFor="applicationPosition"
+      >
+        <b>
+          Interested Position(s):
+        </b>
+      </label>
+      <select
+        id="applicationPosition"
+        name="applicationPosition"
+      >
+        <option
+          value="Spanish teacher"
+        >
+          Spanish teacher
+        </option>
+        <option
+          value="French teacher"
+        >
+          French teacher
+        </option>
+        <option
+          value="Robotics instructor"
+        >
+          Robotics instructor
+        </option>
+        <option
+          value="Art instructor"
+        >
+          Art instructor
+        </option>
+      </select>
+      <label
+        className="required"
+        htmlFor="applicationResume"
+      >
+        <b>
+          Resume
+        </b>
+        (Link)
+      </label>
+      <input
+        autoCapitalize="none"
+        autoCorrect="off"
+        id="applicationResume"
+        name="applicationResume"
+        placeholder="https://drive.google.com/file/d/examplelink3648384748/view"
+        required={true}
+        type="url"
+      />
+      <br />
+      <button
+        id="application-submit-btn"
+        type="submit"
+      >
+        <b>
+          Apply
+        </b>
+      </button>
+    </form>
+  </div>
+</div>
+`;
