@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AdminDashboard component Renders UI as expected 1`] = `
+<div
+  className="AdminDashboard"
+>
+  <div
+    className="NavBar"
+  >
+    <header>
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <img
+          alt="all-in-education-logo"
+          id="main-logo"
+          src="all-in-logo.png"
+        />
+      </a>
+      <a
+        href="/admin-login"
+      >
+        <button
+          id="admin-login-button"
+        >
+          Admin Login
+        </button>
+      </a>
+    </header>
+  </div>
+  <h1>
+    Subjects:
+  </h1>
+  <ul
+    id="job-position-tiles"
+  >
+    <a
+      href="/applicant-list"
+      onClick={[Function]}
+    >
+      <li
+        className="job-tile"
+        onClick={[Function]}
+      >
+        <b>
+          Spanish
+        </b>
+      </li>
+    </a>
+    <a
+      href="/applicant-list"
+      onClick={[Function]}
+    >
+      <li
+        className="job-tile"
+        onClick={[Function]}
+      >
+        <b>
+          French
+        </b>
+      </li>
+    </a>
+    <a
+      href="/applicant-list"
+      onClick={[Function]}
+    >
+      <li
+        className="job-tile"
+        onClick={[Function]}
+      >
+        <b>
+          Robotics
+        </b>
+      </li>
+    </a>
+    <a
+      href="/applicant-list"
+      onClick={[Function]}
+    >
+      <li
+        className="job-tile"
+        onClick={[Function]}
+      >
+        <b>
+          Art
+        </b>
+      </li>
+    </a>
+  </ul>
+</div>
+`;
