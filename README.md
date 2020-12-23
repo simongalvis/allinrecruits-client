@@ -10,14 +10,22 @@
 
 ## Screenshots
 
-- Application Page<br/>
-![Application Page]()
-
-- Admin Dashboard
-![Admin Dashboard]()
+- Landing Page<br/>
+![Application Page](/src/images/landing-page-screenshot.png)
 
 - Submissions Page
-![Submissions Page]()
+![Submissions Page](/src/images/applicant-list-screenshot.png)
+
+- Admin Dashboard
+![Admin Dashboard](/src/images/admin-dashboard-screenshot.png)
+
+- Application Page
+![Application Page](/src/images/application-page-screenshot.png)
+
+- Admin Login Page<br/>
+![Application Page](/src/images/admin-login-screenshot.png)
+
+
 
 
 
