@@ -22,7 +22,7 @@ exports[`LandingPage component Renders UI as expected 1`] = `
         href="/admin-login"
       >
         <button
-          id="admin-login-button"
+          id="admin-login-btn"
         >
           Admin Login
         </button>
@@ -45,6 +45,12 @@ exports[`LandingPage component Renders UI as expected 1`] = `
       <b
         className="styles_typicalWrapper__1_Uvh"
       />
+    </div>
+    <br />
+    <div
+      id="app-description"
+    >
+      Apply now to be considered for our upcoming available positions.
     </div>
   </p>
   <br />

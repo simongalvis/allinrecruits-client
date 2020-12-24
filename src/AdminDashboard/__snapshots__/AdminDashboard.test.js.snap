@@ -22,7 +22,7 @@ exports[`AdminDashboard component Renders UI as expected 1`] = `
         href="/admin-login"
       >
         <button
-          id="admin-login-button"
+          id="admin-login-btn"
         >
           Admin Login
         </button>
@@ -32,61 +32,73 @@ exports[`AdminDashboard component Renders UI as expected 1`] = `
   <h1>
     Subjects:
   </h1>
-  <ul
-    id="job-position-tiles"
+  <div
+    className="tiles-container"
   >
-    <a
-      href="/applicant-list"
-      onClick={[Function]}
+    <ul
+      id="job-position-tiles"
     >
-      <li
-        className="job-tile"
+      <a
+        href="/applicant-list"
         onClick={[Function]}
       >
-        <b>
-          Spanish
-        </b>
-      </li>
-    </a>
-    <a
-      href="/applicant-list"
-      onClick={[Function]}
-    >
-      <li
-        className="job-tile"
+        <li
+          className="job-tile"
+          onClick={[Function]}
+        >
+          <b
+            id="subject-btn-title"
+          >
+            Spanish
+          </b>
+        </li>
+      </a>
+      <a
+        href="/applicant-list"
         onClick={[Function]}
       >
-        <b>
-          French
-        </b>
-      </li>
-    </a>
-    <a
-      href="/applicant-list"
-      onClick={[Function]}
-    >
-      <li
-        className="job-tile"
+        <li
+          className="job-tile"
+          onClick={[Function]}
+        >
+          <b
+            id="subject-btn-title"
+          >
+            French
+          </b>
+        </li>
+      </a>
+      <a
+        href="/applicant-list"
         onClick={[Function]}
       >
-        <b>
-          Robotics
-        </b>
-      </li>
-    </a>
-    <a
-      href="/applicant-list"
-      onClick={[Function]}
-    >
-      <li
-        className="job-tile"
+        <li
+          className="job-tile"
+          onClick={[Function]}
+        >
+          <b
+            id="subject-btn-title"
+          >
+            Robotics
+          </b>
+        </li>
+      </a>
+      <a
+        href="/applicant-list"
         onClick={[Function]}
       >
-        <b>
-          Art
-        </b>
-      </li>
-    </a>
-  </ul>
+        <li
+          className="job-tile"
+          onClick={[Function]}
+        >
+          <b
+            id="subject-btn-title"
+          >
+            Art
+          </b>
+        </li>
+      </a>
+    </ul>
+  </div>
 </div>
 `;

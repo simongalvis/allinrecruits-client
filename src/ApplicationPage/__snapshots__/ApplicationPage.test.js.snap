@@ -22,7 +22,7 @@ exports[`ApplicationPage component Renders UI as expected 1`] = `
         href="/admin-login"
       >
         <button
-          id="admin-login-button"
+          id="admin-login-btn"
         >
           Admin Login
         </button>
@@ -30,7 +30,7 @@ exports[`ApplicationPage component Renders UI as expected 1`] = `
     </header>
   </div>
   <h1>
-    Application Page
+    Application
   </h1>
   <div
     className="ApplicationForm"
@@ -42,10 +42,9 @@ exports[`ApplicationPage component Renders UI as expected 1`] = `
         className="required"
         htmlFor="applicationFullname"
       >
-        <b>
-          Full name:
-        </b>
+        Full name:
       </label>
+      <br />
       <input
         autoCapitalize="none"
         autoCorrect="off"
@@ -55,13 +54,13 @@ exports[`ApplicationPage component Renders UI as expected 1`] = `
         required={true}
         type="text"
       />
+      <br />
       <label
         htmlFor="applicationPhonenumber"
       >
-        <b>
-          Phone number:
-        </b>
+        Phone number:
       </label>
+      <br />
       <input
         autoCapitalize="none"
         autoCorrect="off"
@@ -70,13 +69,13 @@ exports[`ApplicationPage component Renders UI as expected 1`] = `
         placeholder="123-456-7890"
         type="tel"
       />
+      <br />
       <label
         htmlFor="application-email"
       >
-        <b>
-          Email:
-        </b>
+        Email:
       </label>
+      <br />
       <input
         autoCapitalize="none"
         autoCorrect="off"
@@ -85,13 +84,13 @@ exports[`ApplicationPage component Renders UI as expected 1`] = `
         placeholder="johnsmith123@email.com"
         type="email"
       />
+      <br />
       <label
         htmlFor="applicationPosition"
       >
-        <b>
-          Interested Position(s):
-        </b>
+        Interested Position(s):
       </label>
+      <br />
       <select
         id="applicationPosition"
         name="applicationPosition"
@@ -117,15 +116,14 @@ exports[`ApplicationPage component Renders UI as expected 1`] = `
           Art instructor
         </option>
       </select>
+      <br />
       <label
         className="required"
         htmlFor="applicationResume"
       >
-        <b>
-          Resume
-        </b>
-        (Link)
+        Resume(Link)
       </label>
+      <br />
       <input
         autoCapitalize="none"
         autoCorrect="off"

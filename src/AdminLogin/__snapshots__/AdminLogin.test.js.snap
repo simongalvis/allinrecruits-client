@@ -22,17 +22,20 @@ exports[`AdminLogin component Renders UI as expected 1`] = `
         href="/admin-login"
       >
         <button
-          id="admin-login-button"
+          id="admin-login-btn"
         >
           Admin Login
         </button>
       </a>
     </header>
   </div>
-  <h1>
-    AdminLogin
+  <h1
+    id="admin-login-heading"
+  >
+    Administrator Login
   </h1>
   <form
+    id="admin-login-form"
     onSubmit={[Function]}
   >
     <label
@@ -69,6 +72,7 @@ exports[`AdminLogin component Renders UI as expected 1`] = `
     />
     <br />
     <button
+      id="admin-login-button"
       type="submit"
     >
       Log In

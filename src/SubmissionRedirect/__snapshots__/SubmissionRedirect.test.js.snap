@@ -22,7 +22,7 @@ exports[`SubmissionRedirect component Renders UI as expected 1`] = `
         href="/admin-login"
       >
         <button
-          id="admin-login-button"
+          id="admin-login-btn"
         >
           Admin Login
         </button>

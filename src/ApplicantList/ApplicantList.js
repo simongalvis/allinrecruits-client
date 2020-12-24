@@ -37,8 +37,9 @@ handleClickDelete = id =>{
           //console.log(this.state.filteredSubmissions)
           this.context.deleteSubmission(submissionId)
         })
-        .then(this.setState({ deleteTriggered: true}))
+        
       })
+      .then(this.setState({ deleteTriggered: true}))
       .catch(error => {
         console.error({ error })
       })   

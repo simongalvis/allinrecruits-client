@@ -22,7 +22,7 @@ exports[`ApplicantList component Renders UI as expected 1`] = `
         href="/admin-login"
       >
         <button
-          id="admin-login-button"
+          id="admin-login-btn"
         >
           Admin Login
         </button>
@@ -33,8 +33,12 @@ exports[`ApplicantList component Renders UI as expected 1`] = `
     Submissions: 
     
   </h1>
-  <ul
-    id="applicant-tiles"
-  />
+  <div
+    className="tiles-container"
+  >
+    <ul
+      id="applicant-tiles"
+    />
+  </div>
 </div>
 `;
