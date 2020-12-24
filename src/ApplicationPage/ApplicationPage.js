@@ -11,7 +11,6 @@ class ApplicationPage extends React.Component{
             <div className="ApplicationPage">
                 <NavBar/>
                 <h1>Application</h1>
-                
                 <ApplicationForm history={this.props.history}/>
             </div>
         )

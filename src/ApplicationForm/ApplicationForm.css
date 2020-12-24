@@ -41,36 +41,10 @@ label{
     text-align:left;
     font-weight: bold;
 }
-
-.checkboxLabel{
-    display: inline;
-    justify-content: right;
-    text-align: center;
-    width:20%;
-    margin:3% 0;
-    margin-left:0;
-    border-radius: auto;
-    height:auto;
-    max-width:auto;
-    color:auto;
-    align-self: center;
-}
-.checkboxInput{
-    margin: 3% 0 0 0;
-    width: 5%;
-    align-self: center;
-}
-.checkboxLabelAndInput{
-    text-align:center;
-}
 .required:after {
     content:" *";
     color: red;
   }
-#interestedPositionCheckboxList{
-    display: flex;
-    flex-direction: column;
-}
 #application-submit-btn{
     width: 177px;
     height: 33px;

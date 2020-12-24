@@ -23,21 +23,19 @@ state = {
 }
 
 componentDidMount(){
-
+  //fetch submissions and add them to state
   fetch(`${config.API_ENDPOINT}/submissions`)
     .then(res => res.json())
     .then(resJson => this.setState({
         submissions: [resJson]
     }))
-
+    //fetch admins and add them to state
     fetch(`${config.API_ENDPOINT}/admins`)
     .then(res => res.json())
     .then(resJson => this.setState({
         admins: [resJson]
     }))
-  
 }
-
 
 handleAddSubmission = (submission) =>{
   const requestOptions = {
@@ -46,7 +44,6 @@ handleAddSubmission = (submission) =>{
     body: JSON.stringify(submission),
   };
   
-
   fetch(`${config.API_ENDPOINT}/submissions`, requestOptions)
     .then((res) => res.json())
     .then((resJson) =>
@@ -54,11 +51,11 @@ handleAddSubmission = (submission) =>{
         submissions: [...this.state.submissions, submission ],
       })
     )
-    //console.log(this.state.submissions)
 }
+
 handleSelectSubject = (subject) =>{
   this.setState({selectedSubject: subject})
-}
+};
 
 handleLogin = (loginUsername, loginPassword) => {
   const requestOptions = {
@@ -69,27 +66,24 @@ handleLogin = (loginUsername, loginPassword) => {
 
   fetch(`${config.API_ENDPOINT}/admins/login`, requestOptions)
    .then((res) => { if (res.statusText !== 'OK') {
-     
       alert('Username or password are incorrect. Please try again!')
    }
    else if (res.statusText === 'OK') {
      const found = this.state.admins[0].find(admin => (admin['username'] === loginUsername) ) 
-     
-     // console.log(found)
+  
       this.setState({loggedAdmin: found})  
    }
  })
 };
+
 handleDeleteSubmission = submissionId =>{
     this.setState({
     submissions: !this.state.deleteTriggered
                  ? this.state.submissions[0].filter(submission => submission.id !== submissionId) 
                  : this.state.submissions.filter(submission => submission.id !== submissionId)
   })
+
   this.setState({ deleteTriggered: true})  
-  //console.log(this.state.submissions[0].filter(submission => submission.id !== submissionId))
-  //console.log('Listening' + submissionId)
-  
 }
 
 
@@ -102,13 +96,12 @@ renderMainRoutes(){
     <Route exact path="/admin-dashboard" component={AdminDashboard}/>
     <Route exact path="/applicant-list" component={ApplicantList}/>
     <Route exact path="/submission-redirect" component={SubmissionRedirect}/>
-
-
   </>
   )
   
 }
   render(){
+    
     const value = {
       admins: this.state.admins,
       submissions: this.state.submissions,
@@ -120,6 +113,7 @@ renderMainRoutes(){
       deleteSubmission: this.handleDeleteSubmission,
       deleteTriggered:this.state.deleteTriggered
     }
+
     return (
       <ApiContext.Provider value={value}>
         <div className="App">

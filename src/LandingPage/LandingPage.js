@@ -15,6 +15,7 @@ class LandingPage extends React.Component{
                 <h1>Welcome to All-In Recruits!</h1>
                 <p id="hero-text">Find a position as a: {' '}  <br/>
                 <div className="typingHero">
+                    {/* Create typing effect using 'Typical' npm library */}
                     <Typical
                         id="type-effect-text"
                         steps={[`spanish teacher`, 2000,`french teacher`, 2000, " robotics instructor", 2000, `art instructor`, 2000,]}
@@ -23,9 +24,6 @@ class LandingPage extends React.Component{
                 </div><br/>
                 <div id="app-description">Apply now to be considered for our upcoming available positions.</div>
                 </p><br/>
-                
-                
-                
                 <Link to="/application-page">
                     <button id="apply-button">Apply Now</button>
                 </Link>

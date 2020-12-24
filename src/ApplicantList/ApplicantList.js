@@ -17,8 +17,7 @@ state={
 handleClickDelete = id =>{
     const submissionId = id
 
-    //console.log(submissionId)
-
+    //delete submission with provided id
     fetch(`${config.API_ENDPOINT}/submissions/${submissionId}`, {
       method: 'DELETE',
       headers: {
@@ -30,14 +29,11 @@ handleClickDelete = id =>{
           return res.json().then(e => Promise.reject(e))
       })
       .then(() => {
-       // console.log(this.state.filteredSubmissions)
         this.setState({
           filteredSubmissions: this.state.filteredSubmissions.filter(submission => submission.id !== submissionId)
         }, () => {
-          //console.log(this.state.filteredSubmissions)
           this.context.deleteSubmission(submissionId)
         })
-        
       })
       .then(this.setState({ deleteTriggered: true}))
       .catch(error => {
@@ -46,7 +42,6 @@ handleClickDelete = id =>{
 }
                                                                           
     render(){
-      //console.log("Filtered list here: " + this.state.filteredSubmissions)
         return(
             <div className="ApplicantList">
                 <NavBar/>
@@ -56,16 +51,14 @@ handleClickDelete = id =>{
                     {this.state.filteredSubmissions.map(submission =>(
                     <li className="applicantTile" key={submission.id}>
                         <b>{submission.fullname}</b>
-                        Number: {submission.phonenumber}<br/>
-                        Email: {submission.email}<br/>
-                         <a href={submission.resumelink} rel="noreferrer" target="_blank"  >Resume: {submission.resumelink}</a>
-                         <button id="delete-btn" onClick={e => this.handleClickDelete(submission.id)}>Remove🗑️ </button>
-
+                          Number: {submission.phonenumber}<br/>
+                          Email: {submission.email}<br/>
+                        <a href={submission.resumelink} rel="noreferrer" target="_blank"  >Resume: {submission.resumelink}</a>
+                        <button id="delete-btn" onClick={e => this.handleClickDelete(submission.id)}>Remove🗑️ </button>
                     </li>  
            ))}
                 </ul> 
                 </div>
-                
             </div>
         )
     }

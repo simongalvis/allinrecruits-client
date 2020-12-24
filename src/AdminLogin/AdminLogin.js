@@ -11,18 +11,12 @@ class AdminLogin extends React.Component{
        
     
     const  { loginUsername, loginPassword } = e.target;
-    this.context.loginAdmin(loginUsername.value, loginPassword.value )
+
+    this.context.loginAdmin(loginUsername.value, loginPassword.value)
        
-      
-       
-      setTimeout( () => {if (Object.keys(this.context.loggedAdmin).length > 0){
+    //if there's a logged admin, redirect to admin dashboard
+    setTimeout( () => {if (Object.keys(this.context.loggedAdmin).length > 0){
                this.props.history.push('/admin-dashboard')}}, 1000) 
-        
-       
-    
-    
-    
-    
     }
 
 
@@ -40,7 +34,6 @@ class AdminLogin extends React.Component{
                     <label htmlFor="loginPassword"><b>Password:</b> </label>
                     <input type="password" id="loginPassword" name="loginPassword" autoCorrect="off" autoCapitalize="none" required/><br/>
                     <button type="submit" id="admin-login-button">Log In</button>
-                    
                 </form>
             </div>
         )

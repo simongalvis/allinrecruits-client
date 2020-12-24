@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom'
 class NavBar extends React.Component{
 
 
-
     render(){
         return(
             <div className="NavBar">
@@ -17,9 +16,7 @@ class NavBar extends React.Component{
                     <a href="/admin-login">
                         <button  id="admin-login-btn">Admin Login</button>
                     </a>
-                </header>
-                
-                
+                </header> 
             </div>
         )
     }

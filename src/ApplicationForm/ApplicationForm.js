@@ -9,9 +9,8 @@ static contextType = ApiContext;
 
     handleSubmit = e =>{
         e.preventDefault();
-        //console.log('I am working')
+    
         const { applicationFullname, applicationPhonenumber, applicationEmail, applicationPosition, applicationResume } = e.target;
-        
         
         const submission = {
             fullname: applicationFullname.value,
@@ -26,18 +25,13 @@ static contextType = ApiContext;
         e.target.reset();
 
         setTimeout( () => this.props.history.push('/submission-redirect'), 1000)
-
-        
-        
-        
-    
-        //console.log(submission)
     }
+
      openPositions =['French teacher','Spanish teacher', 'Robotics instructor', 'Art instructor']
+
      state ={
          counter: 0
      }
-
 
     render(){
         return(
@@ -60,10 +54,8 @@ static contextType = ApiContext;
                     </select><br/>
                     <label htmlFor="applicationResume" className="required">Resume(Link)</label><br/>
                     <input type="url" id="applicationResume" name="applicationResume" placeholder="https://drive.google.com/file/d/examplelink3648384748/view" autoCorrect="off" autoCapitalize="none" required/><br/>
-                    <button id="application-submit-btn" type="submit" ><b>Apply</b></button>{/* </a> */}
+                    <button id="application-submit-btn" type="submit" ><b>Apply</b></button>
                 </form>
-                
-                
             </div>
         )
     }

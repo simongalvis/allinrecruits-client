@@ -23,13 +23,11 @@ static contextType = ApiContext;
                 <h1>Subjects:</h1>
                 <div className="tiles-container">
                 <ul id="job-position-tiles">
-                {
+                {  //Render list of subjects included in subjects array
                     subjects.map(subject =>(
-                
                     <Link to="applicant-list" key={subject}>
                         <li className="job-tile"   onClick={ e => this.context.selectSubject(subject)}><b id="subject-btn-title">{subject}</b></li>
                     </Link>
-                
                     ))     
                 }
                 </ul>

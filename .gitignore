@@ -23,15 +23,3 @@ yarn-debug.log*
 yarn-error.log*
 
 .vercel
-
-
-{
-                        this.openPositions.map(position =>(
-                        <div className="checkboxLabelAndInput">
-                            <input type="checkbox" id={`subject${this.counter + 1}`} className="checkboxInput" name={`subject${this.counter + 1}`} value={position}/>
-                            <label htmlFor={`subject${this.counter + 1}`} className="checkboxLabel">{position}</label>
-                            {this.setState({counter: this.state.counter++})}
-                        </div>
-                        )
-                             )
-                              }

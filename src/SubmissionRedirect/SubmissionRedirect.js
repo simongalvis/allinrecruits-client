@@ -11,9 +11,8 @@ class SubmissionRedirect extends React.Component{
             <div className="SubmissionRedirect">
                 <NavBar/>
                 <h2>Thank you for your submission!</h2>
-                <p>We'll process your application and let you know when we have available positions that suit your profile</p><br/>
-               
-    
+                <p>We'll process your application and let you know
+                   when we have available positions that suit your profile</p><br/>
             </div>
         )
     }

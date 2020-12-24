@@ -14,8 +14,7 @@ header{
     background-color:rgb(224, 224, 224);
     padding: 3px 16px;
     border-bottom: 1px solid rgb(231, 231, 231);
-    min-height: 55px;
-    
+    min-height: 55px;  
 }
 #main-logo{
     padding-top: 7%;
