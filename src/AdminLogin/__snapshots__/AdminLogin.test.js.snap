@@ -34,6 +34,21 @@ exports[`AdminLogin component Renders UI as expected 1`] = `
   >
     Administrator Login
   </h1>
+  <div
+    id="sample-admin-credentials"
+  >
+    Sample admin credentials:
+    <br />
+    <b>
+      Username:
+    </b>
+     sampleadmin
+    <br />
+    <b>
+      Password:
+    </b>
+     sampleadmin
+  </div>
   <form
     id="admin-login-form"
     onSubmit={[Function]}

@@ -88,7 +88,7 @@ exports[`ApplicationPage component Renders UI as expected 1`] = `
       <label
         htmlFor="applicationPosition"
       >
-        Interested Position(s):
+        Interested Position:
       </label>
       <br />
       <select

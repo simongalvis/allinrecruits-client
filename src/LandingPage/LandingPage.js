@@ -17,7 +17,7 @@ class LandingPage extends React.Component{
                 <div className="typingHero">
                     <Typical
                         id="type-effect-text"
-                        steps={[`spanish teacher`, 2000,`french teacher`, 2000, " robotics instructor", 2000, `chess instructor`, 2000,]}
+                        steps={[`spanish teacher`, 2000,`french teacher`, 2000, " robotics instructor", 2000, `art instructor`, 2000,]}
                         loop={Infinity}
                         wrapper="b"/>
                 </div><br/>

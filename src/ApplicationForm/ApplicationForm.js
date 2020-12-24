@@ -50,7 +50,7 @@ static contextType = ApiContext;
                     <label htmlFor="application-email">Email:</label><br/>
                     <input type="email" id="applicationEmail" name="applicationEmail" placeholder="johnsmith123@email.com" autoCorrect="off" autoCapitalize="none" /><br/>
                     
-                    <label htmlFor="applicationPosition">Interested Position(s):</label><br/>
+                    <label htmlFor="applicationPosition">Interested Position:</label><br/>
 
                     <select name="applicationPosition" id="applicationPosition">
                         <option value="Spanish teacher">Spanish teacher</option>

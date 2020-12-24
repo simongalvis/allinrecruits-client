@@ -14,7 +14,12 @@
     margin-bottom: 0;
     padding-bottom: 17px;
 }
-
+ #sample-admin-credentials{
+    margin: 24px 0px 0px 0px; 
+    font-size: 17px;
+    color: white;
+}
+ 
 #admin-login-button{
     margin: 24px 24px;
     width: 177px;

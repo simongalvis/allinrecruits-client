@@ -31,12 +31,14 @@ class AdminLogin extends React.Component{
             <div className="AdminLogin">
                 <NavBar/>
                 <h1 id="admin-login-heading">Administrator Login</h1>
+                <div id="sample-admin-credentials">Sample admin credentials:<br/>
+                <b>Username:</b> sampleadmin<br/>
+                <b>Password:</b> sampleadmin</div>
                 <form id="admin-login-form" onSubmit={this.handleSubmit}>
                     <label htmlFor="loginUsername"><b>Username:</b> </label>
                     <input type="text" id="loginUsername" name="loginUsername" autoCorrect="off" autoCapitalize="none" required/>
                     <label htmlFor="loginPassword"><b>Password:</b> </label>
                     <input type="password" id="loginPassword" name="loginPassword" autoCorrect="off" autoCapitalize="none" required/><br/>
-                    
                     <button type="submit" id="admin-login-button">Log In</button>
                     
                 </form>
