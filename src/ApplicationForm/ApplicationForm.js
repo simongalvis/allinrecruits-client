@@ -27,8 +27,6 @@ static contextType = ApiContext;
         setTimeout( () => this.props.history.push('/submission-redirect'), 1000)
     }
 
-     openPositions =['French teacher','Spanish teacher', 'Robotics instructor', 'Art instructor']
-
      state ={
          counter: 0
      }
