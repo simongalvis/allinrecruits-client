@@ -9,11 +9,19 @@ class ApplicantList extends React.Component{
 
 static contextType = ApiContext;
 state={
-  filteredSubmissions: !this.context.deleteTriggered
+  
+  filteredSubmissions: !localStorage.getItem('submissions') ? (!this.context.deleteTriggered
                        ? this.context.submissions[0].filter(submission => submission.interestedposition.includes(this.context.selectedSubject))
-                       : this.context.submissions.filter(submission => submission.interestedposition.includes(this.context.selectedSubject)) 
+                       : this.context.submissions[0].filter(submission => submission.interestedposition.includes(this.context.selectedSubject)) )
+
+                       : JSON.parse(localStorage.getItem('delete-triggered')) === 'true' ? JSON.parse(localStorage.getItem('submissions')).filter(submission => !this.context.selectedSubject ? submission.interestedposition.includes(JSON.parse(localStorage.getItem('selected-subject'))) : submission.interestedposition.includes(this.context.selectedSubject)) : JSON.parse(localStorage.getItem('submissions'))[0].filter(submission => !this.context.selectedSubject ? submission.interestedposition.includes(JSON.parse(localStorage.getItem('selected-subject'))) : submission.interestedposition.includes(this.context.selectedSubject)),
 }
 
+/* printState = () =>{
+  this.setState({ zig: "I am changed"}, () => console.log(this.state.zig))
+   
+}
+ */
 handleClickDelete = id =>{
     const submissionId = id
 
@@ -33,19 +41,34 @@ handleClickDelete = id =>{
           filteredSubmissions: this.state.filteredSubmissions.filter(submission => submission.id !== submissionId)
         }, () => {
           this.context.deleteSubmission(submissionId)
+          localStorage.setItem('submissions', JSON.stringify(this.state.filteredSubmissions))
+          localStorage.setItem('delete-triggered', JSON.stringify('true'))
         })
       })
       .then(this.setState({ deleteTriggered: true}))
+      .then(localStorage.setItem('submissions', JSON.stringify(this.state.zig))
+      )
       .catch(error => {
         console.error({ error })
       })   
+
+      console.log(this.context.submissions)
 }
-                                                                          
+
+    componentDidMount(){
+       localStorage.setItem('submissions', JSON.stringify(this.context.submissions ? this.context.submissions : JSON.parse(localStorage.getItem('submissions'))))
+
+       localStorage.setItem('selected-subject', JSON.stringify(this.context.selectedSubject ? this.context.selectedSubject : JSON.parse(localStorage.getItem('selected-subject'))))
+
+       localStorage.setItem('delete-triggered', JSON.stringify('false'))
+    
+    }                                                                 
     render(){
+      
         return(
             <div className="ApplicantList">
                 <NavBar/>
-                <h1>Submissions: {this.context.selectedSubject}</h1>
+                <h1>Submissions: {this.context.selectedSubject ? this.context.selectedSubject : JSON.parse(localStorage.getItem('selected-subject'))}</h1>
                 <div className="tiles-container">
                 <ul id="applicant-tiles">
                     {this.state.filteredSubmissions.map(submission =>(
