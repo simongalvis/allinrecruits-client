@@ -9,11 +9,10 @@ class ApplicantList extends React.Component{
 
 static contextType = ApiContext;
 state={
-  
+  //set submissions based on whether subissions exist in local storage
   filteredSubmissions: !localStorage.getItem('submissions') ? (!this.context.deleteTriggered
                        ? this.context.submissions.filter(submission => submission.interestedposition.includes(this.context.selectedSubject))
                        : this.context.submissions.filter(submission => submission.interestedposition.includes(this.context.selectedSubject)) )
-
                        : JSON.parse(localStorage.getItem('delete-triggered')) === 'true' ? JSON.parse(localStorage.getItem('submissions')).filter(submission => !this.context.selectedSubject ? submission.interestedposition.includes(JSON.parse(localStorage.getItem('selected-subject'))) : submission.interestedposition.includes(this.context.selectedSubject)) : JSON.parse(localStorage.getItem('submissions')).filter(submission => !this.context.selectedSubject ? submission.interestedposition.includes(JSON.parse(localStorage.getItem('selected-subject'))) : submission.interestedposition.includes(this.context.selectedSubject)),
 }
 
