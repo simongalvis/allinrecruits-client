@@ -46,8 +46,6 @@ handleClickDelete = id =>{
       .catch(error => {
         console.error({ error })
       })   
-
-      console.log(this.context.submissions)
 }
 
     componentDidMount(){
