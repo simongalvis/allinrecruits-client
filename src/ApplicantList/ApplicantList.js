@@ -69,7 +69,7 @@ handleClickDelete = id =>{
                         <b>{submission.fullname}</b>
                           Number: {submission.phonenumber}<br/>
                           Email: {submission.email}<br/>
-                        <a href={submission.resumelink} rel="noreferrer" target="_blank"  >Resume: {submission.resumelink}</a>
+                          <span>Resume:<a href={submission.resumelink} id="resume-link" rel="noreferrer" target="_blank"  > {submission.resumelink}</a></span>
                         <button id="delete-btn" onClick={e => this.handleClickDelete(submission.id)}>Remove🗑️ </button>
                     </li>  
            ))}

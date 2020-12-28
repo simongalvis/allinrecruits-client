@@ -28,6 +28,9 @@ p{
     font-weight: bold;
     
 }
+#resume-link{
+    color: rgb(241, 90, 41);
+}
 @media only screen and (min-width: 777px) {
     .applicantTile{
         width:500px;
