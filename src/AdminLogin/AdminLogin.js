@@ -19,7 +19,13 @@ class AdminLogin extends React.Component{
                this.props.history.push('/admin-dashboard')}}, 1000) 
     }
 
+componentDidMount(){
+    localStorage.setItem('submissions', '')
 
+       localStorage.setItem('selected-subject', '')
+
+       localStorage.setItem('delete-triggered', '')
+}
     render(){
         return(
             <div className="AdminLogin">

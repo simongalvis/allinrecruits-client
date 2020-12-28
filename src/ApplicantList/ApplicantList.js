@@ -11,17 +11,13 @@ static contextType = ApiContext;
 state={
   
   filteredSubmissions: !localStorage.getItem('submissions') ? (!this.context.deleteTriggered
-                       ? this.context.submissions[0].filter(submission => submission.interestedposition.includes(this.context.selectedSubject))
-                       : this.context.submissions[0].filter(submission => submission.interestedposition.includes(this.context.selectedSubject)) )
+                       ? this.context.submissions.filter(submission => submission.interestedposition.includes(this.context.selectedSubject))
+                       : this.context.submissions.filter(submission => submission.interestedposition.includes(this.context.selectedSubject)) )
 
-                       : JSON.parse(localStorage.getItem('delete-triggered')) === 'true' ? JSON.parse(localStorage.getItem('submissions')).filter(submission => !this.context.selectedSubject ? submission.interestedposition.includes(JSON.parse(localStorage.getItem('selected-subject'))) : submission.interestedposition.includes(this.context.selectedSubject)) : JSON.parse(localStorage.getItem('submissions'))[0].filter(submission => !this.context.selectedSubject ? submission.interestedposition.includes(JSON.parse(localStorage.getItem('selected-subject'))) : submission.interestedposition.includes(this.context.selectedSubject)),
+                       : JSON.parse(localStorage.getItem('delete-triggered')) === 'true' ? JSON.parse(localStorage.getItem('submissions')).filter(submission => !this.context.selectedSubject ? submission.interestedposition.includes(JSON.parse(localStorage.getItem('selected-subject'))) : submission.interestedposition.includes(this.context.selectedSubject)) : JSON.parse(localStorage.getItem('submissions')).filter(submission => !this.context.selectedSubject ? submission.interestedposition.includes(JSON.parse(localStorage.getItem('selected-subject'))) : submission.interestedposition.includes(this.context.selectedSubject)),
 }
 
-/* printState = () =>{
-  this.setState({ zig: "I am changed"}, () => console.log(this.state.zig))
-   
-}
- */
+
 handleClickDelete = id =>{
     const submissionId = id
 
@@ -60,7 +56,7 @@ handleClickDelete = id =>{
 
        localStorage.setItem('selected-subject', JSON.stringify(this.context.selectedSubject ? this.context.selectedSubject : JSON.parse(localStorage.getItem('selected-subject'))))
 
-       localStorage.setItem('delete-triggered', JSON.stringify('false'))
+       localStorage.setItem('delete-triggered', JSON.stringify("false"))
     
     }                                                                 
     render(){

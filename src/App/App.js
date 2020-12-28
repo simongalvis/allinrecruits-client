@@ -27,13 +27,13 @@ componentDidMount(){
   fetch(`${config.API_ENDPOINT}/submissions`)
     .then(res => res.json())
     .then(resJson => this.setState({
-        submissions: [resJson]
+        submissions: resJson
     }))
     //fetch admins and add them to state
     fetch(`${config.API_ENDPOINT}/admins`)
     .then(res => res.json())
     .then(resJson => this.setState({
-        admins: [resJson]
+        admins: resJson
     }))
 }
 
@@ -69,7 +69,7 @@ handleLogin = (loginUsername, loginPassword) => {
       alert('Username or password are incorrect. Please try again!')
    }
    else if (res.statusText === 'OK') {
-     const found = this.state.admins[0].find(admin => (admin['username'] === loginUsername) ) 
+     const found = this.state.admins.find(admin => (admin['username'] === loginUsername) ) 
   
       this.setState({loggedAdmin: found})  
    }
@@ -79,7 +79,7 @@ handleLogin = (loginUsername, loginPassword) => {
 handleDeleteSubmission = submissionId =>{
     this.setState({
     submissions: !this.state.deleteTriggered
-                 ? this.state.submissions[0].filter(submission => submission.id !== submissionId) 
+                 ? this.state.submissions.filter(submission => submission.id !== submissionId) 
                  : this.state.submissions.filter(submission => submission.id !== submissionId)
   })
 
@@ -101,7 +101,7 @@ renderMainRoutes(){
   
 }
   render(){
-    
+
     const value = {
       admins: this.state.admins,
       submissions: this.state.submissions,

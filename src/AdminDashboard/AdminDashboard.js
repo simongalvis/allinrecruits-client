@@ -10,7 +10,9 @@ static contextType = ApiContext;
 
 
 
-
+componentDidMount(){
+    localStorage.setItem('delete-triggered', JSON.stringify("false"))
+}
     render(){
 
         const subjects = ['Spanish','French','Robotics','Art']
@@ -38,46 +40,3 @@ static contextType = ApiContext;
     }
 }
 export default AdminDashboard;
-
-
-/* 
-li{
-    list-style-type: none;
-    padding: 0;
-    font-size: 33px;
-    height: 95px;
-    border: 1px solid black;
-    margin: 3%;
-    border-radius: 3px;
-    max-width: 500px;
-}
-ul{
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-}
-a{
-    color:black;
-    text-decoration: none;
-}
-.AdminDashboard{
-    height:100%;
-}
-.job-tile:hover{
-background-color: rgb(241, 90, 41, .5);
-}
-.job-tile{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 500px;
-}
-#subject-btn-title{
-    font-size: 27px;
-    
-}
-#job-tiles-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */

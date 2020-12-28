@@ -31,7 +31,6 @@ exports[`ApplicantList component Renders UI as expected 1`] = `
   </div>
   <h1>
     Submissions: 
-    
   </h1>
   <div
     className="tiles-container"
