@@ -18,7 +18,7 @@ class LandingPage extends React.Component{
                     {/* Create typing effect using 'Typical' npm library */}
                     <Typical
                         id="type-effect-text"
-                        steps={[`spanish teacher`, 2000,`french teacher`, 2000, " robotics instructor", 2000, `art instructor`, 2000,]}
+                        steps={['spanish teacher', 2000,'french teacher', 2000, 'robotics instructor', 2000, 'art instructor', 2000,]}
                         loop={Infinity}
                         wrapper="b"/>
                 </div><br/>
