@@ -7,7 +7,6 @@
 }
 .typingHero{
     display: inline;
-    text-align: left;
     font-size: 33px;
     color:rgb(0, 0, 0);
     font-weight: 900;
@@ -19,10 +18,9 @@
 #app-description{
     display: inline;
     margin: 24px 0px; 
-    padding-left:21px;
-    padding-right:21px;
     max-width: 700px;
-    font-size: 17px;
+    font-size: 21px;
+    text-align: center;
 }
 #apply-button{
     margin: 24px 24px;
