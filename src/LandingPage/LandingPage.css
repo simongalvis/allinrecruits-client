@@ -7,7 +7,6 @@
 }
 .typingHero{
     display: inline;
-    text-align: left;
     font-size: 33px;
     color:rgb(0, 0, 0);
     font-weight: 900;
@@ -15,6 +14,10 @@
 #hero-text{
     font-size: 33px;
     color:rgb(53, 53, 53)
+}
+#type-effect-text{
+    text-align: center;
+    width:200px;
 }
 #app-description{
     display: inline;

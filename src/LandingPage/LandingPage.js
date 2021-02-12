@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import NavBar from '../NavBar/NavBar';
 import './LandingPage.css'
-import Typical from 'react-typical';
+import Typewriter from 'typewriter-effect';
 
 class LandingPage extends React.Component{
 
@@ -15,12 +15,15 @@ class LandingPage extends React.Component{
                 <h1>Welcome to All-In Recruits!</h1>
                 <p id="hero-text">Find a position as a: {' '}  <br/>
                 <div className="typingHero">
-                    {/* Create typing effect using 'Typical' npm library */}
-                    <Typical
-                        id="type-effect-text"
-                        steps={['spanish teacher', 2000,'french teacher', 2000, 'robotics instructor', 2000, 'art instructor', 2000,]}
-                        loop={Infinity}
-                        wrapper="b"/>
+                    {/* Create typewriter effect */}
+                    <Typewriter id="type-effect-text" 
+                                options={{
+                                            strings: ['spanish teacher', 'french teacher', 'robotics instructor', 'art instructor'],
+                                            autoStart: true,
+                                            loop: true,
+                                            skipAddStyles: true
+                                        }}
+                        />
                 </div><br/>
                 <div id="app-description">Apply now to be considered for our upcoming available positions.</div>
                 </p><br/>
