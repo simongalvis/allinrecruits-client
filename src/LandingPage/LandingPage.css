@@ -15,17 +15,12 @@
     font-size: 33px;
     color:rgb(53, 53, 53)
 }
-#type-effect-text{
-    text-align: center;
-    width:200px;
-}
 #app-description{
     display: inline;
     margin: 24px 0px; 
-    padding-left:21px;
-    padding-right:21px;
     max-width: 700px;
-    font-size: 17px;
+    font-size: 21px;
+    text-align: center;
 }
 #apply-button{
     margin: 24px 24px;
