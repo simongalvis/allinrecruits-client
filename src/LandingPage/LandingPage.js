@@ -18,7 +18,7 @@ class LandingPage extends React.Component{
                     {/* Create typewriter effect */}
                     <Typewriter id="type-effect-text" 
                                 options={{
-                                            strings: ['spanish teacher', 'french teacher', 'robotics instructor', 'art instructor'],
+                                            strings: ['Spanish Teacher', 'French Teacher', 'Robotics Instructor', 'Art Instructor'],
                                             autoStart: true,
                                             loop: true,
                                             skipAddStyles: true
